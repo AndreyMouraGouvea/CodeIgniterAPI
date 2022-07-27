@@ -100,3 +100,56 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 ## Running CodeIgniter Tests
 
 Information on running the CodeIgniter test suite can be found in the [README.md](tests/README.md) file in the tests directory.
+
+# Conectar ao banco de dados
+#codeigniter4.github.io/userguide/dbmgmt
+localhost/phpmyadmin
+usuário=root senha=
+app>config>database
+definir nome do database{0}
+app>Database
+- desligar php spark serve
+- rodar
+- php spark migrate
+- php spark migrate:create pessoas
+- pessoas.php
+- apos criar a table, rodar
+- php spark migrate
+localhost/phpmyadmin => banco de dados => utf8_general_ci
+criar nome banco de dados de acordo com nome anterior{0}
+
+# Criar seeds
+
+app>config>database>seeds
+- pessoas.php
+- codigo
+- rodar
+- php spark db:seed Pessoas
+
+# Atualizações
+
+- php spark migrate (rodar migrations de pessoas, carros e motos)
+- php spark db:seed Pessoas
+- php spark db:seed Carros
+- php spark db:seed Motos
+
+# Alterar tabela do banco
+
+-  realizar alterações em app>config>database>migrations...
+-  php spark migrate:refresh
+-  criar seeds de novo
+- php spark db:seed Pessoas
+- php spark db:seed Carros
+- php spark db:seed Motos
+
+### Database = api
+### Username = root
+### Type = utf8_general_ci
+
+# CREATE 
+
+- php spark migrate:create Pessoas
+- php spark migrate
+- php spark db:seed Produtos
+
+# https://codeigniter4.github.io/userguide/dbmgmt/migration.html
