@@ -15,9 +15,8 @@ class Produtos extends Seeder
                 'descricao' => $desc[$x],
                 'valor'    => $valor[$x],
             ];
-            
-            
+    
+            $this->db->table('produtos')->insert($data);
         }
-
     }
 }

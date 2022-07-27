@@ -101,6 +101,7 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 
 Information on running the CodeIgniter test suite can be found in the [README.md](tests/README.md) file in the tests directory.
 
+<<<<<<< HEAD
 # Conectar ao banco de dados
 #codeigniter4.github.io/userguide/dbmgmt
 localhost/phpmyadmin
@@ -153,3 +154,10 @@ app>config>database>seeds
 - php spark db:seed Produtos
 
 # https://codeigniter4.github.io/userguide/dbmgmt/migration.html
+=======
+
+### username = root 
+### database = api
+### type = utf8_general_ci
+ - php spark serve migrate:create Produtos
+>>>>>>> 9248d1c64b2fd9a28ae61a93ff6bdf91ab7df642
