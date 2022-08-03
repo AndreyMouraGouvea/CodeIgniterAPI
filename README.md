@@ -101,7 +101,6 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 
 Information on running the CodeIgniter test suite can be found in the [README.md](tests/README.md) file in the tests directory.
 
-<<<<<<< HEAD
 # Conectar ao banco de dados
 #codeigniter4.github.io/userguide/dbmgmt
 localhost/phpmyadmin
@@ -139,9 +138,6 @@ app>config>database>seeds
 -  realizar alterações em app>config>database>migrations...
 -  php spark migrate:refresh
 -  criar seeds de novo
-- php spark db:seed Pessoas
-- php spark db:seed Carros
-- php spark db:seed Motos
 
 ### Database = api
 ### Username = root
@@ -149,15 +145,21 @@ app>config>database>seeds
 
 # CREATE 
 
-- php spark migrate:create Pessoas
+- php spark migrate:create Produtos
 - php spark migrate
 - php spark db:seed Produtos
 
-# https://codeigniter4.github.io/userguide/dbmgmt/migration.html
-=======
+### https://codeigniter4.github.io/userguide/dbmgmt/migration.html
 
-### username = root 
-### database = api
-### type = utf8_general_ci
- - php spark serve migrate:create Produtos
->>>>>>> 9248d1c64b2fd9a28ae61a93ff6bdf91ab7df642
+# Passo a passo
+
+```
+1. Database> Seed> New File> nome.php
+2. php spark migrate: create Nome
+3. php spark db:seed Nome
+4. Models> NomeModel.php
+4. Controllers> Nome.php
+5. App> Routes> $routes->get('listar', 'Produtos::index');
+
+
+```

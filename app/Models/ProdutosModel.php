@@ -8,7 +8,7 @@ class ProdutosModel extends Model
 {
     protected $table = 'produtos';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['descricao' , 'valor'];
+    protected $allowedFields = ['descricao', 'valor'];
 
     public function getProduto($id){
         return $this ->asArray()->where(['id'=>$id])->first();
