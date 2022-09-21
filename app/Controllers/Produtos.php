@@ -42,7 +42,10 @@ class Produtos extends ResourceController
         $this->produtosModel->delete($id);
     }
     public function atualizar($id){
+         
         $data = $this->request->getJSON();
+    
         $this->produtosModel->update($id, $data);
+
     }
 }
