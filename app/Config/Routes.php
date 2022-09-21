@@ -45,6 +45,8 @@ $routes->get('model/(:num)', 'Produtos::produtomodel/$1');
 $routes->delete('delete/(:num)', 'Produtos::deletar/$1');
 $routes->put('atualizar/(:segment)', 'Produtos::atualizar/$1');
 $routes->patch('atualizar/(:segment)', 'Produtos::atualizar/$1');
+$routes->get('listar', 'Produtos::listar');
+$routes->get('listarMB', 'Produtos::listarmb');
 
 
 /*
